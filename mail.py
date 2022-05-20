@@ -8,12 +8,15 @@ import tkinter as tk
 from tkinter import simpledialog
 application_window = tk.Tk()
 
+mail= simpledialog.askstring("Input", "MailID?",parent=application_window)
+password= simpledialog.askstring("Input", "Password", parent=application_window)
+
 class SendEmail:
     #loading login credentials 
-    def __init__(self):
-        self.gmail_user = simpledialog.askstring("Input", "MailID?",parent=application_window)
+    def __init__(self, mail, password):
+        self.gmail_user = mail
         print(self.gmail_user)
-        self.gmail_password =  simpledialog.askstring("Input", "Password", parent=application_window)
+        self.gmail_password =  password
         print(self.gmail_password)
 
     #for appple mail make changes here
