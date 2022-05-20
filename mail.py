@@ -13,7 +13,7 @@ password= simpledialog.askstring("Input", "Password", parent=application_window)
 
 class SendEmail:
     #loading login credentials 
-    def __init__(self, mail, password):
+    def __init__(self):
         self.gmail_user = mail
         print(self.gmail_user)
         self.gmail_password =  password
