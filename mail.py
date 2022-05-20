@@ -10,15 +10,15 @@ application_window = tk.Tk()
 
 class SendEmail:
     #loading login credentials 
-    def __init__(self, to_):
+    def __init__(self):
         self.gmail_user = simpledialog.askstring("Input", "MailID?",parent=application_window)
         print(self.gmail_user)
         self.gmail_password =  simpledialog.askstring("Input", "Password", parent=application_window)
         print(self.gmail_password)
-        self.to_=to_
 
     #for appple mail make changes here
-    def create_msg(self,file,msg_html,subject):
+    def create_msg(self,file,msg_html,subject,to_):
+        self.to_=to_
         msgRoot = MIMEMultipart('related')
         msgRoot['From'] = self.gmail_user
         msgRoot['To'] = self.to_
