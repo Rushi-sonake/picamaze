@@ -11,11 +11,9 @@ from RPA.Robocorp.Vault import Vault
 class SendEmail:
     #loading login credentials 
     def __init__(self):
-        secret= Vault().get_secret("Config")
-        #self.gmail_user = simpledialog.askstring("Input", "MailID?",parent=application_window)
+        secret = Vault().get_secret("Config")
         self.gmail_user = secret['sender_email']
         print(self.gmail_user)
-        #self.gmail_password =  simpledialog.askstring("Input", "Password", parent=application_window)
         self.gmail_password = secret['sender_password']
         print(self.gmail_password)
 
