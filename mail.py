@@ -32,6 +32,6 @@ class SendEmail:
         return msgRoot
     
     def send_mail(self,msgRoot,):
-        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+        with smtplib.SMTP_SSL('gsgp1032.siteground.asia', 465) as smtp:
             smtp.login(self.gmail_user, self.gmail_password) #Login to SMTP server
             smtp.send_message(msgRoot, self.gmail_user,self.to_)
