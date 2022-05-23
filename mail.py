@@ -11,9 +11,9 @@ Secrets_=Vault().get_secret("Config")
 class SendEmail:
     #loading login credentials 
     def __init__(self):
-        self.gmail_user = Secrets_("GDId")
+        self.gmail_user = Secrets_["GDId"]
         print(self.gmail_user)
-        self.gmail_password = Secrets_("GDPass")
+        self.gmail_password = Secrets_["GDPass"]
         print(self.gmail_password)
 
     #for appple mail make changes here
