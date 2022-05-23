@@ -69,6 +69,7 @@ class Shopify:
         list_activity['Installed']=[]
         list_activity['Uninstalled']=[]
         list_activity['Recurring charge cancelled']=[]
+        list_activity['Recurring charge activated']=[]
         # Iterate over the rows
         finish=False
         temps=[]
