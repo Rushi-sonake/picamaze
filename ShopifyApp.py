@@ -27,7 +27,7 @@ class Shopify:
         options.add_experimental_option("detach", True)
         options.add_experimental_option("useAutomationExtension", False)
         options.add_experimental_option("excludeSwitches",["enable-automation"])
-        self.driver = webdriver.Chrome(executable_path=r"chromedriver.exe", chrome_options=options)
+        self.driver = webdriver.Chrome(executable_path=r"chromedriver", chrome_options=options)
     def open_login_window(self):
         website="https://accounts.shopify.com/lookup?rid=05dc5f57-2da6-45ad-9fc8-a172078a9a9e"
         self.driver.get("https://partners.shopify.com/organizations")
