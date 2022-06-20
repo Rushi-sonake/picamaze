@@ -24,6 +24,7 @@ secret= Vault().get_secret("Config")
 class Shopify:
     def __init__(self):
         options = webdriver.ChromeOptions()
+        options.add_argument('headless')
         options.add_experimental_option("detach", True)
         options.add_experimental_option("useAutomationExtension", False)
         options.add_experimental_option("excludeSwitches",["enable-automation"])
