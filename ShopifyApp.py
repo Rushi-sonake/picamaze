@@ -24,12 +24,13 @@ secret= Vault().get_secret("Config")
 class Shopify:
     def __init__(self):
         options = webdriver.ChromeOptions()
-        #options.add_argument('headless')
+        options.add_argument('headless')
+        options.headless=True
         options.add_argument('--no-sandbox')
         options.add_experimental_option("detach", True)
         options.add_experimental_option("useAutomationExtension", False)
         options.add_experimental_option("excludeSwitches",["enable-automation"])
-        self.driver = webdriver.Chrome(executable_path="chromedriver.exe", chrome_options=options)
+        self.driver = webdriver.Chrome(chrome_options=options)
     def open_login_window(self):
         website="https://accounts.shopify.com/lookup?rid=05dc5f57-2da6-45ad-9fc8-a172078a9a9e"
         self.driver.get("https://partners.shopify.com/organizations")
